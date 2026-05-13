@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forma — Architecture & Real Estate</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── Navigation ─────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="#" class="logo">FORMA</a>
+    <ul class="nav-links">
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#about">Studio</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta">Inquire</button>
+    <button class="nav-hamburger" aria-label="Open menu">&#9776;</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&times;</button>
+    <ul>
+      <li><a href="#properties" class="mobile-link">Properties</a></li>
+      <li><a href="#about" class="mobile-link">Studio</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ─── Hero ───────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1800&q=80" alt="Featured property" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-eyebrow reveal">Architecture Studio</span>
+      <h1 class="hero-title reveal">
+        Spaces that<br /><em>endure.</em>
+      </h1>
+      <p class="hero-sub reveal">We design and curate exceptional properties where architecture meets the art of living.</p>
+      <div class="hero-actions reveal">
+        <a href="#properties" class="btn btn-primary">View Properties</a>
+        <a href="#about" class="btn btn-ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── Stats Bar ───────────────────────────────────────────────── -->
+  <section class="stats-bar">
+    <div class="stat reveal">
+      <span class="stat-number" data-target="120">0</span><span class="stat-suffix">+</span>
+      <span class="stat-label">Projects Completed</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat reveal">
+      <span class="stat-number" data-target="18">0</span><span class="stat-suffix"></span>
+      <span class="stat-label">Years of Practice</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat reveal">
+      <span class="stat-number" data-target="9">0</span><span class="stat-suffix"></span>
+      <span class="stat-label">Design Awards</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat reveal">
+      <span class="stat-number" data-target="4">0</span><span class="stat-suffix"></span>
+      <span class="stat-label">Countries</span>
+    </div>
+  </section>
+
+  <!-- ─── Featured Properties ─────────────────────────────────────── -->
+  <section class="section" id="properties">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Portfolio</span>
+        <h2>Featured Properties</h2>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="mixed">Mixed-Use</button>
+      </div>
+
+      <div class="properties-grid">
+
+        <article class="property-card reveal" data-category="residential">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=75" alt="The Meridian House" loading="lazy" />
+            <div class="card-badge">Residential</div>
+            <div class="card-hover-overlay">
+              <a href="#" class="card-view-btn">View Project</a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>Oslo, Norway</span><span>2024</span>
+            </div>
+            <h3 class="card-title">The Meridian House</h3>
+            <p class="card-desc">A sculptural residence carved into a hillside, blurring the boundary between architecture and landscape.</p>
+            <div class="card-footer">
+              <span class="card-price">€ 4,200,000</span>
+              <span class="card-area">320 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-category="commercial">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=75" alt="Helix Tower" loading="lazy" />
+            <div class="card-badge">Commercial</div>
+            <div class="card-hover-overlay">
+              <a href="#" class="card-view-btn">View Project</a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>Amsterdam, NL</span><span>2023</span>
+            </div>
+            <h3 class="card-title">Helix Tower</h3>
+            <p class="card-desc">A 28-floor office tower whose spiraling façade harvests daylight and minimizes solar heat gain.</p>
+            <div class="card-footer">
+              <span class="card-price">Upon Request</span>
+              <span class="card-area">14,500 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-category="residential">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=75" alt="Lake Pavilion" loading="lazy" />
+            <div class="card-badge">Residential</div>
+            <div class="card-hover-overlay">
+              <a href="#" class="card-view-btn">View Project</a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>Zurich, Switzerland</span><span>2024</span>
+            </div>
+            <h3 class="card-title">Lake Pavilion</h3>
+            <p class="card-desc">A single-storey lakeside retreat defined by floor-to-ceiling glass and raw concrete volumes.</p>
+            <div class="card-footer">
+              <span class="card-price">CHF 6,800,000</span>
+              <span class="card-area">280 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-category="mixed">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=75" alt="Quartier Nord" loading="lazy" />
+            <div class="card-badge">Mixed-Use</div>
+            <div class="card-hover-overlay">
+              <a href="#" class="card-view-btn">View Project</a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>Berlin, Germany</span><span>2022</span>
+            </div>
+            <h3 class="card-title">Quartier Nord</h3>
+            <p class="card-desc">A vibrant mixed-use district combining co-working spaces, residences and public plazas.</p>
+            <div class="card-footer">
+              <span class="card-price">Upon Request</span>
+              <span class="card-area">8,200 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-category="residential">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=75" alt="Courtyard Villa" loading="lazy" />
+            <div class="card-badge">Residential</div>
+            <div class="card-hover-overlay">
+              <a href="#" class="card-view-btn">View Project</a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>Lisbon, Portugal</span><span>2023</span>
+            </div>
+            <h3 class="card-title">Courtyard Villa</h3>
+            <p class="card-desc">A Mediterranean-modern fusion centered around a lush interior courtyard and reflecting pool.</p>
+            <div class="card-footer">
+              <span class="card-price">€ 2,900,000</span>
+              <span class="card-area">410 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card reveal" data-category="commercial">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=75" alt="Studio Collective" loading="lazy" />
+            <div class="card-badge">Commercial</div>
+            <div class="card-hover-overlay">
+              <a href="#" class="card-view-btn">View Project</a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>Copenhagen, DK</span><span>2023</span>
+            </div>
+            <h3 class="card-title">Studio Collective</h3>
+            <p class="card-desc">An adaptive reuse of a former warehouse into a creative studio complex with exposed brick and steel.</p>
+            <div class="card-footer">
+              <span class="card-price">DKK 32,000,000</span>
+              <span class="card-area">2,100 m²</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-cta reveal">
+        <a href="#" class="btn btn-outline">View All Properties</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── About / Philosophy ──────────────────────────────────────── -->
+  <section class="section section-alt" id="about">
+    <div class="container about-grid">
+      <div class="about-images reveal">
+        <img class="about-img-main" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=75" alt="Studio interior" />
+        <img class="about-img-secondary" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=75" alt="Architects at work" />
+      </div>
+      <div class="about-text reveal">
+        <span class="eyebrow">Our Studio</span>
+        <h2>Design rooted in purpose</h2>
+        <p class="about-lead">Founded in 2006, Forma is an award-winning architecture studio specialising in residential and commercial properties that stand the test of time.</p>
+        <p>We believe great architecture is not just about aesthetics — it's about how a space makes people feel, how it responds to its environment, and how it evolves with the people who inhabit it.</p>
+        <p>Each project begins with listening. We immerse ourselves in context: the light, the landscape, the culture and the client's vision. The result is architecture that feels inevitable.</p>
+        <a href="#contact" class="btn btn-primary" style="margin-top:2rem;">Work with us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Services ────────────────────────────────────────────────── -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">What We Offer</span>
+        <h2>Our Services</h2>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="36" width="36" height="4" rx="1" stroke="currentColor" stroke-width="2"/><path d="M12 36V18l12-10 12 10v18" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="19" y="26" width="10" height="10" rx="1" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Residential Design</h3>
+          <p>From intimate retreats to grand family homes, we craft residences tailored to how you actually live.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="10" width="32" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 38V26h16v12" stroke="currentColor" stroke-width="2"/><path d="M8 18h32" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="14" r="2" fill="currentColor"/></svg>
+          </div>
+          <h3>Commercial Projects</h3>
+          <p>Office towers, retail spaces and hospitality venues designed with productivity and human experience at the core.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/><path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Master Planning</h3>
+          <p>Holistic urban and site master plans that balance density, ecology and livability for entire districts.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 38l8-12 8 8 6-8 6 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 38h36" stroke="currentColor" stroke-width="2"/><path d="M24 10l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4l2-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Interior Architecture</h3>
+          <p>Spatially coherent interiors where material, light and proportion are composed with the same rigour as the building.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 40h32M12 40V20l12-8 12 8v20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M18 30h12v10H18z" stroke="currentColor" stroke-width="2"/><path d="M20 20h8v6h-8z" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Property Consulting</h3>
+          <p>Strategic advisory for developers and investors — site assessment, feasibility studies and design due diligence.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6L6 18v24h12V30h12v12h12V18L24 6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Sustainable Design</h3>
+          <p>Passive strategies, biophilic principles and renewable integration — sustainability embedded from concept to completion.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Testimonial ──────────────────────────────────────────────── -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="testimonial reveal">
+        <blockquote>
+          "Forma transformed a difficult hillside plot into the home of our dreams. Their ability to read the landscape and translate that into architecture was extraordinary."
+        </blockquote>
+        <cite>— Elise &amp; Thomas K., Oslo</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contact ──────────────────────────────────────────────────── -->
+  <section class="section section-alt" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Get in Touch</span>
+        <h2>Let's create something remarkable</h2>
+        <p>Whether you have a site, a brief or just an idea — we'd love to hear from you. Every great project starts with a conversation.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-label">Studio</span>
+            <span>Prinsengracht 112, Amsterdam</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:hello@forma-studio.com">hello@forma-studio.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Phone</span>
+            <a href="tel:+310201234567">+31 (0)20 123 4567</a>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Project Type</label>
+          <select id="subject" name="subject">
+            <option value="" disabled selected>Select a service…</option>
+            <option>Residential Design</option>
+            <option>Commercial Project</option>
+            <option>Master Planning</option>
+            <option>Interior Architecture</option>
+            <option>Property Consulting</option>
+            <option>Sustainable Design</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about your project…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        <p class="form-success" id="formSuccess">✓ Thank you! We'll be in touch shortly.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── Footer ───────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo">FORMA</span>
+        <p>Architecture & Real Estate Studio<br />Amsterdam · Oslo · Berlin</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#about">Studio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.5M11 17v-4a2 2 0 014 0v4M11 10v7"/></svg>
+        </a>
+        <a href="#" aria-label="Dezeen">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Forma Architecture Studio. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
