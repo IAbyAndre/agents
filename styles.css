@@ -623,30 +623,73 @@ p  { font-size: 0.97rem; color: var(--grey-700); line-height: 1.8; }
 }
 .service-card p { font-size: 0.87rem; line-height: 1.7; }
 
-/* ─── Testimonial ────────────────────────────────── */
-.testimonial-section {
-  background: var(--accent);
-  padding: clamp(4rem, 8vw, 7rem) 0;
+/* ─── Reviews ───────────────────────────────────── */
+.reviews-section {
+  background:
+    radial-gradient(circle at top left, rgba(181, 164, 138, 0.12), transparent 34%),
+    linear-gradient(180deg, var(--off-white) 0%, #fdfdfc 100%);
 }
-.testimonial {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
-.testimonial blockquote {
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--grey-100);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(181, 164, 138, 0.45);
+}
+
+.review-rating {
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  color: var(--accent-warm);
+}
+
+.review-card blockquote {
   font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 300;
   font-style: italic;
-  color: var(--white);
+  color: var(--grey-900);
   line-height: 1.55;
-  margin-bottom: 1.5rem;
 }
-.testimonial cite {
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+
+.review-card footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--grey-100);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.review-card footer strong {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--grey-900);
+}
+
+.review-card footer span {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent-warm);
+  color: var(--grey-500);
 }
 
 /* ─── Contact ────────────────────────────────────── */
